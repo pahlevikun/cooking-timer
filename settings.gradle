@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Cooking Timer"
 include ':app'
+include ':component-shrinkclick'

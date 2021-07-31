@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/fl_container_title"
+    android:layout_height="?android:actionBarSize"
+    android:fitsSystemWindows="true"
+    android:elevation="@dimen/_8sdp"
+    android:layout_centerHorizontal="true"
+    android:layout_gravity="center_horizontal"
+    android:paddingHorizontal="@dimen/_16sdp">
+
+    <TextView
+        android:id="@+id/tv_toast"
+        style="@style/Text.H1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_gravity="center"
+        tools:text="A toast for the toast..." />
+</FrameLayout>

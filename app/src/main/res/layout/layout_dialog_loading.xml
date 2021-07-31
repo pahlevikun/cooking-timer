@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/medium_margin">
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/Text.H1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        tools:text="Creating Account" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        style="@style/Text.B3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        tools:text="Creating Account" />
+
+    <id.pahlevikun.cookingtimer.common.view.HorizontalProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/small_margin"
+        android:layout_marginBottom="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/medium_margin" />
+
+</LinearLayout>

@@ -22,8 +22,8 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
-    viewBinding {
-        enabled = true
+    buildFeatures {
+        viewBinding true
     }
     lintOptions {
         checkReleaseBuilds false
@@ -137,7 +137,7 @@ android {
         targetCompatibility JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = '1.11'
+        jvmTarget = '11'
     }
 }
 
@@ -147,12 +147,15 @@ dependencies {
 
     annotationProcessor annotation.daggerAnnotation
     kapt compiler.glideCompiler
-    kapt compiler.roomCompiler
     kapt compiler.daggerCompiler
     kapt compiler.daggerAndroidCompiler
 
     implementation jetpackLibraries.appCompat
     implementation jetpackLibraries.recyclerView
+    implementation jetpackLibraries.viewmodel
+    implementation jetpackLibraries.livedata
+    implementation jetpackLibraries.activityKtx
+    implementation jetpackLibraries.fragmentKtx
     implementation jetpackLibraries.annotation
     implementation jetpackLibraries.design
     implementation jetpackLibraries.constraintLayout
@@ -160,8 +163,6 @@ dependencies {
 
     implementation rxLibraries.rxJava2
     implementation rxLibraries.rxAndroid
-
-    implementation databaseLibraries.room
 
     implementation networkLibraries.gsonConverter
 
@@ -181,6 +182,8 @@ dependencies {
     implementation firebase.messaging
     implementation playstore.core
     implementation platform('com.google.firebase:firebase-bom:28.3.0')
+
+    implementation project(':component-shrinkclick')
 
     // Unit Test
     testImplementation testLibraries.jUnit
