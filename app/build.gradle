@@ -1,0 +1,212 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+    id 'com.google.firebase.crashlytics'
+}
+
+apply from: "$rootDir/build-system/dependencies.gradle"
+apply from: "$rootDir/build-system/jacoco.gradle"
+apply from: "$rootDir/build-system/utils.gradle"
+
+android {
+    compileSdkVersion compileVersion
+    buildToolsVersion buildVersion
+
+    defaultConfig {
+        minSdkVersion minVersion
+        targetSdkVersion targetVersion
+        versionCode appVersionCode
+        versionName appVersionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    viewBinding {
+        enabled = true
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    signingConfigs {
+        release {
+            storeFile file(KEYSTORE)
+            storePassword KEYSTORE_PASSWORD
+            keyAlias KEY_ALIAS
+            keyPassword KEY_PASSWORD
+        }
+        debug {
+            storeFile file(KEYSTORE)
+            storePassword KEYSTORE_PASSWORD
+            keyAlias KEY_ALIAS
+            keyPassword KEY_PASSWORD
+        }
+    }
+    buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            matchingFallbacks = ['debug']
+            applicationIdSuffix '.dev'
+            versionNameSuffix '-dev'
+            signingConfig signingConfigs.debug
+        }
+        trial {
+            debuggable true
+            minifyEnabled true
+            shrinkResources false
+            zipAlignEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            matchingFallbacks = ['debug']
+            applicationIdSuffix '.trial'
+            versionNameSuffix '-trial'
+            signingConfig signingConfigs.debug
+        }
+        release {
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            matchingFallbacks = ['release']
+            signingConfig signingConfigs.release
+        }
+    }
+    flavorDimensions "product"
+    productFlavors {
+        free {
+            dimension "product"
+            applicationId appId
+        }
+        premium {
+            dimension "product"
+            applicationId appId
+        }
+    }
+    applicationVariants.all { variant ->
+        def finalAppName
+        def encryptKey
+        def currentDate = new Date().format('yyMMddhhmmss')
+        def free = variant.getName().toLowerCase().contains('digi')
+        def trial = variant.getName().toLowerCase().contains('trial')
+        def release = variant.getName().toLowerCase().contains('release')
+
+        if (free) {
+            if (release) {
+                finalAppName = freePlainAppName
+            } else if (trial) {
+                finalAppName = "${freePlainAppName} Trial"
+            } else {
+                finalAppName = "${freePlainAppName} Dev"
+            }
+        } else {
+            if (release) {
+                finalAppName = premiumPlainAppName
+            } else if (trial) {
+                finalAppName = "${premiumPlainAppName} Trial"
+            } else {
+                finalAppName = "${premiumPlainAppName} Dev"
+            }
+        }
+        if (release) {
+            encryptKey = encryptKeyProd
+        } else {
+            encryptKey = encryptKeyDev
+        }
+        resValue "string", "app_name", finalAppName
+        buildConfigField "String", "APP_NAME", "\"${finalAppName}\""
+        buildConfigField "String", "ENCRYPT_KEY", encryptKey
+        variant.outputs.all {
+            outputFileName = "${variant.name}-${appVersionName}(${appVersionCode})-${currentDate}-${getGitHash}.apk"
+        }
+    }
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        test.java.srcDirs += 'src/test/kotlin'
+        androidTest.java.srcDirs += 'src/androidTest/kotlin'
+        main {
+            res.srcDirs = ['src/main/res']
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '1.11'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation kotlinLibraries.kotlin
+
+    annotationProcessor annotation.daggerAnnotation
+    kapt compiler.glideCompiler
+    kapt compiler.roomCompiler
+    kapt compiler.daggerCompiler
+    kapt compiler.daggerAndroidCompiler
+
+    implementation jetpackLibraries.appCompat
+    implementation jetpackLibraries.recyclerView
+    implementation jetpackLibraries.annotation
+    implementation jetpackLibraries.design
+    implementation jetpackLibraries.constraintLayout
+    implementation jetpackLibraries.multidex
+
+    implementation rxLibraries.rxJava2
+    implementation rxLibraries.rxAndroid
+
+    implementation databaseLibraries.room
+
+    implementation networkLibraries.gsonConverter
+
+    implementation libraries.jotter
+    implementation libraries.dagger
+    implementation libraries.gson
+    implementation libraries.jodatime
+    implementation libraries.bouncycastle
+
+    implementation imageLibraries.glide
+    implementation imageLibraries.lottie
+
+    implementation firebase.core
+    implementation firebase.analytics
+    implementation firebase.config
+    implementation firebase.crashlytics
+    implementation firebase.messaging
+    implementation playstore.core
+    implementation platform('com.google.firebase:firebase-bom:28.3.0')
+
+    // Unit Test
+    testImplementation testLibraries.jUnit
+    testImplementation testLibraries.jUnitPlatformRunner
+    testImplementation testLibraries.mockk
+    testImplementation testLibraries.mockito
+    testImplementation testLibraries.mockitoInline
+    testImplementation testLibraries.powermockApi
+    testImplementation testLibraries.powermockModule
+    testImplementation testLibraries.powermockRule
+
+    // Instrument Test
+    androidTestImplementation testLibraries.espresso
+    androidTestImplementation testLibraries.runner
+    androidTestImplementation testLibraries.spoon
+    androidTestImplementation testLibraries.falconSpoon
+    androidTestImplementation testLibraries.powermockFull
+
+    // Dev Tools
+    implementation libraries.curlLoggerInterceptor
+    debugImplementation libraries.chuck
+    trialImplementation libraries.chuck
+    releaseImplementation libraries.chuckNoOp
+    debugImplementation libraries.stetho
+    trialImplementation libraries.stetho
+    releaseImplementation libraries.stethoNoOp
+    debugImplementation libraries.leakCanary
+    trialImplementation libraries.leakCanary
+}

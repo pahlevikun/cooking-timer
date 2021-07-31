@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dialog_action_positive_ok">Oke</string>
+    <string name="language_setting">Ubah Bahasa</string>
+    <string name="alert_dialog_language_button_cancel">Batal</string>
+
+    <string name="progress_loading">Mohon Tunggu</string>
+
+    <string name="date_time_today_format">Hari ini, %1$s</string>
+    <string name="date_time_yesterday_format">Kemarin, %1$s</string>
+    <string name="backdrop_greeting_morning">Selamat Pagi!</string>
+    <string name="backdrop_greeting_afternoon">Selamat Siang!</string>
+    <string name="backdrop_greeting_evening">Selamat Sore!</string>
+    <string name="backdrop_greeting_night">Selamat Malam!</string>
+    <string name="backdrop_greeting_default">Welcome back!</string>
+
+    <string name="home_dialog_permission_title">Izin aplikasi</string>
+    <string name="home_dialog_permission_sub_title">Berikan izin aplikasi untuk membuat Bubble?</string>
+    <string name="home_dialog_permission_content">Dengan bubble, Anda dapat meenggunakan Tasbih bersamaan dengan aplikasi lain.</string>
+</resources>

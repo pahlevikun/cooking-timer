@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AspectRatioImageView">
+        <attr name="aspectRatio" format="float" />
+        <attr name="aspectRatioEnabled" format="boolean" />
+        <attr name="dominantMeasurement">
+            <enum name="width" value="0" />
+            <enum name="height" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CircleView">
+        <attr name="radius" format="dimension"/>
+        <attr name="color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="DefaultProgressBar">
+        <attr name="loading" format="boolean" />
+    </declare-styleable>
+
+    <attr name="interval" format="integer" />
+
+    <attr name="showSliderIndicator" format="boolean" />
+
+    <attr name="orientation" format="enum">
+        <enum name="horizontal" value="0" />
+        <enum name="vertical" value="1" />
+    </attr>
+
+    <attr name="autoStartMovement" format="boolean" />
+
+    <declare-styleable name="TextField">
+        <attr name="label" format="string" />
+        <attr name="hintLabel" format="string" />
+        <attr name="fieldType" format="enum">
+            <enum name="text" value="1" />
+            <enum name="email" value="2" />
+            <enum name="number" value="3" />
+            <enum name="name" value="4" />
+            <enum name="address" value="5" />
+            <enum name="password" value="6" />
+            <enum name="decimal" value="7" />
+            <enum name="phone" value="8" />
+            <enum name="capword" value="9" />
+            <enum name="rupiah" value="10" />
+        </attr>
+        <attr name="isEnable" format="boolean" />
+        <attr name="isFocusableEnable" format="boolean" />
+        <attr name="maxLength" format="integer" />
+        <attr name="minLength" format="integer" />
+        <attr name="maxLines" format="integer" />
+        <attr name="showCounter" format="boolean" />
+        <attr name="imeOption" format="enum">
+            <enum name="actionNext" value="5" />
+            <enum name="actionDone" value="6" />
+        </attr>
+        <attr name="leftIcon" format="reference" />
+        <attr name="textFieldBackground" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="Shimmer">
+        <attr name="layout" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="GoogleButton">
+        <attr name="isDarkTheme" format="boolean" />
+        <attr name="android:text" />
+    </declare-styleable>
+
+    <declare-styleable name="BannerSliderView">
+        <attr name="interval" />
+        <attr name="showSliderIndicator" />
+        <attr name="orientation" />
+        <attr name="autoStartMovement" />
+        <attr name="bannerSpace" format="integer" />
+        <attr name="scaleCenterBanner" format="float" />
+        <attr name="movementSpeed" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="IntroView">
+        <attr name="title" format="string" />
+        <attr name="help" format="string" />
+        <attr name="buttonTitle" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="FinalView">
+        <attr name="body" format="string" />
+        <attr name="button" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="DigiErrorView">
+        <attr name="digiImageDrawable" format="reference" />
+        <attr name="digiTitle" format="string" />
+        <attr name="digiDescription" format="string" />
+        <attr name="digiAction" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="TileMenuView">
+        <attr name="menuTextColor" format="reference" />
+        <attr name="itemInRow" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="NotificationBadge">
+        <attr name="badge_text" format="string" />
+        <attr name="show_stroke" format="boolean" />
+        <attr name="badge_type" format="enum">
+            <enum name="small" value="0" />
+            <enum name="regular" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

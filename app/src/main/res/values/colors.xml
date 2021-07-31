@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorSlightGrey">#E4E8EA</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGreen">#59e990</color>
+    <color name="colorGreenSoft">#d7fae6</color>
+    <color name="colorRed">#e13b58</color>
+    <color name="colorRedSoft">#fae1e6</color>
+    <color name="colorYellow">#f4c441</color>
+    <color name="colorYellowSoft">#fbf3d6</color>
+    <color name="colorTransparent">#00ffffff</color>
+    <color name="colorSlidingPanelDark">#202e34</color>
+    <color name="colorSlidingPanelDarkSecondary">#2c3d44</color>
+    <color name="colorSlidingPanelLight">#dee3f3</color>
+    <color name="colorSlidingPanelLightSecondary">#ffffff</color>
+    <color name="colorTextLight">#2c3d44</color>
+    <color name="colorTextDark">#ffffff</color>
+    <color name="colorTextLight2">#4d4d4d</color>
+    <color name="colorTextDark2">#ffffff</color>
+
+    <color name="colorTextH">@color/colorTextLight</color>
+    <color name="colorTextHInverse">@color/colorTextDark</color>
+    <color name="colorTextB">@color/colorTextLight2</color>
+    <color name="colorTextBInverse">@color/colorTextDark2</color>
+
+    <color name="colorText">#313131</color>
+    <color name="colorText2">#616161</color>
+    <color name="colorText3">#4d4d4d</color>
+    <color name="colorBack">#FDFDFD</color>
+    <color name="colorGrey">#dedede</color>
+    <color name="colorGrey2">#b7b7b7</color>
+    <color name="colorGrey3">#acacac</color>
+    <color name="colorGrey4">#dadada</color>
+</resources>

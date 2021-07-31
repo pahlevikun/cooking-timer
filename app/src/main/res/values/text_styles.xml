@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Text" />
+
+    <style name="Text.HCustom">
+        <item name="android:fontFamily">@font/gs_medium</item>
+    </style>
+
+    <style name="Text.H0">
+        <item name="android:fontFamily">@font/gs_bold</item>
+        <item name="android:textSize">29sp</item>
+        <item name="android:lineSpacingExtra">15sp</item>
+        <item name="android:textColor">@color/colorTextH</item>
+    </style>
+
+    <style name="Text.H0.White" parent="Text.H0">
+        <item name="android:textColor">@color/colorTextHInverse</item>
+    </style>
+
+    <style name="Text.H1">
+        <item name="android:fontFamily">@font/gs_bold</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:lineSpacingExtra">7sp</item>
+        <item name="android:textColor">@color/colorTextH</item>
+    </style>
+
+    <style name="Text.H1.White" parent="Text.H1">
+        <item name="android:textColor">@color/colorTextHInverse</item>
+    </style>
+
+    <style name="Text.H2">
+        <item name="android:fontFamily">@font/gs_bold</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textColor">@color/colorTextH</item>
+    </style>
+
+    <style name="Text.H2.White" parent="Text.H2">
+        <item name="android:textColor">@color/colorTextHInverse</item>
+    </style>
+
+    <style name="Text.H3">
+        <item name="android:fontFamily">@font/gs_bold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">5sp</item>
+        <item name="android:textColor">@color/colorTextH</item>
+    </style>
+
+    <style name="Text.H3.White" parent="Text.H3">
+        <item name="android:textColor">@color/colorTextHInverse</item>
+    </style>
+
+    <style name="Text.H4">
+        <item name="android:fontFamily">@font/gs_bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textColor">@color/colorTextH</item>
+    </style>
+
+    <style name="Text.H4.White" parent="Text.H4">
+        <item name="android:textColor">@color/colorTextHInverse</item>
+    </style>
+
+    <style name="Text.H5">
+        <item name="android:fontFamily">@font/gs_bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="android:textColor">@color/colorTextH</item>
+    </style>
+
+    <style name="Text.H5.White" parent="Text.H5">
+        <item name="android:textColor">@color/colorTextHInverse</item>
+    </style>
+
+    <style name="Text.H6">
+        <item name="android:fontFamily">@font/gs_bold</item>
+        <item name="android:textSize">10.5sp</item>
+        <item name="android:lineSpacingExtra">1.5sp</item>
+        <item name="android:textColor">@color/colorTextH</item>
+    </style>
+
+    <style name="Text.H6.White" parent="Text.H6">
+        <item name="android:textColor">@color/colorTextHInverse</item>
+    </style>
+
+    <style name="Text.B1">
+        <item name="android:fontFamily">@font/gs_regular</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="android:textColor">@color/colorText2</item>
+    </style>
+
+    <style name="Text.B2">
+        <item name="android:fontFamily">@font/gs_regular</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">3sp</item>
+        <item name="android:textColor">@color/colorText2</item>
+    </style>
+
+    <style name="Text.B3">
+        <item name="android:fontFamily">@font/gs_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+        <item name="android:textColor">@color/colorText2</item>
+    </style>
+
+    <style name="Text.B4">
+        <item name="android:fontFamily">@font/gs_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">1sp</item>
+        <item name="android:textColor">@color/colorText2</item>
+    </style>
+
+    <style name="Text.B5">
+        <item name="android:fontFamily">@font/gs_regular</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:lineSpacingExtra">-1.5sp</item>
+        <item name="android:textColor">@color/colorText2</item>
+    </style>
+
+    <style name="Text.B6">
+        <item name="android:fontFamily">@font/gs_regular</item>
+        <item name="android:textSize">8sp</item>
+        <item name="android:lineSpacingExtra">-1.5sp</item>
+        <item name="android:textColor">@color/colorText2</item>
+    </style>
+</resources>

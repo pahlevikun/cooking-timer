@@ -1,0 +1,97 @@
+{
+  "project_info": {
+    "project_number": "327866730051",
+    "project_id": "cooking-timer-73a24",
+    "storage_bucket": "cooking-timer-73a24.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:327866730051:android:14e91c68cd3f298ccf76f6",
+        "android_client_info": {
+          "package_name": "id.pahlevikun.counter.cooking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "327866730051-6d5e6pqeq5teicd2grd1bahq9rl1494q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpeOVVsxvxR9kTYMPulDGs8L3Hx9JuXOQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "327866730051-6d5e6pqeq5teicd2grd1bahq9rl1494q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:327866730051:android:1445980021587bf4cf76f6",
+        "android_client_info": {
+          "package_name": "id.pahlevikun.counter.cooking.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "327866730051-6d5e6pqeq5teicd2grd1bahq9rl1494q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpeOVVsxvxR9kTYMPulDGs8L3Hx9JuXOQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "327866730051-6d5e6pqeq5teicd2grd1bahq9rl1494q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:327866730051:android:90abc6dc690c3983cf76f6",
+        "android_client_info": {
+          "package_name": "id.pahlevikun.counter.cooking.trial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "327866730051-6d5e6pqeq5teicd2grd1bahq9rl1494q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpeOVVsxvxR9kTYMPulDGs8L3Hx9JuXOQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "327866730051-6d5e6pqeq5teicd2grd1bahq9rl1494q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

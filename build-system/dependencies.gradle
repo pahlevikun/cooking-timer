@@ -1,0 +1,223 @@
+ext {
+    appVersionCode = Integer.parseInt(project.properties["APP_VERSION_CODE"])
+    appVersionName = project.properties["APP_VERSION_NAME"]
+    worldTimeBaseUrl = project.properties["BASE_URL_TIME_CHECKER"]
+    encryptKeyDev = project.properties["ENCRYPT_DEVELOPMENT"]
+    encryptKeyProd = project.properties["ENCRYPT_PRODUCTION"]
+    appId = project.properties["APPLICATION_ID"]
+
+    // Free
+    freePlainAppName = project.properties["FREE_APP_NAME"]
+
+    // Premium
+    premiumPlainAppName = project.properties["PREMIUM_APP_NAME"]
+
+    compileVersion = 30
+    targetVersion = 30
+    minVersion = 21
+    buildVersion = '30.0.3'
+
+    // Kotlin
+    kotlinVersion = '1.3.20'
+
+    //Support
+    supportLibVersion = '28.0.0'
+    multidexVersion = '1.0.3'
+    constraintVersion = '1.1.3'
+
+    // Rx
+    rxJava2Version = '3.0.13'
+    rxAndroidVersion = '3.0.0'
+    rxBindingVersion = '4.0.0'
+
+    // Anko
+    ankoVersion = '0.10.5'
+
+    // Networking
+    retrofitVersion = '2.7.2'
+    gsonVersion = '2.8.6'
+    retrofitRxJava2AdapterVersion = '2.7.2'
+    okHttpVersion = '3.10.0'
+
+    // Libraries
+    daggerVersion = '2.38.1'
+    chuckVersion = '1.1.0'
+    eventBusVersion = '3.1.1'
+    curlLoggerInterceptor = '0.1'
+    stethoVersion = '1.5.1'
+    stethoNoOpVersion = '1.1'
+    jodaTimeVersion = '2.9.9'
+    markwonVersion = '4.3.1'
+    shimmerVersion = '0.1.0'
+    easyPermissionsVersion = '1.2.0'
+    rippleVersion = '1.0.2'
+    drawerBehaviorVersion = '0.0.4'
+    actransVersion = '0.0.2'
+    intuitVersion = '1.0.5'
+    slideDialogVersion = '2.2.8'
+    bannersliderVersion = '1.8.0'
+    nineoldandroidsVersion = '2.4.0'
+    daimajiaVersion = '1.1.5'
+    htmlVersion = '3.5'
+    filepickerVersion = '2.1.5'
+
+    // Image
+    glideVersion = '4.12.0'
+    photoViewVersion = '2.1.4'
+    roundedImageVersion = '2.3.0'
+    bouncyCastleVersion = '1.46'
+    lottieVersion = '3.5.0'
+
+    // AndroidX
+    androidxVersion = '1.3.1'
+    androidxMultidexVersion = '2.0.0'
+    androidxConstraintVersion = '1.1.2'
+    androidxEspressoVersion = '3.1.0'
+    androidxRunnerVersion = '1.1.0'
+    playCoreVersion = '1.9.0'
+
+    // Database
+    roomVersion = '2.3.0'
+
+    // Testing
+    powerMockVersion = '1.6.2'
+    jUnitVersion = '4.12'
+    runnerVersion = '1.1.0-alpha4'
+    espressoCoreVersion = '3.1.0-alpha4'
+    mockitoVersion = '2.7.22'
+    mockitoCoreVersion = '2.21.0'
+    spoonClientVersion = '1.7.1'
+    falconSpoonVersion = '1.0.4'
+
+    // Dependencies
+    kotlinLibraries = [
+            kotlin                  : [group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib-jdk8', version: kotlinVersion],
+            kotlinReflect           : [group: 'org.jetbrains.kotlin', name: 'kotlin-reflect', version: kotlinVersion],
+            ankoSdk15               : [group: 'org.jetbrains.anko', name: 'anko-sdk15', version: ankoVersion],
+            ankoSdk15Listeners      : [group: 'org.jetbrains.anko', name: 'anko-sdk15-listeners', version: ankoVersion],
+            ankoSupport             : [group: 'org.jetbrains.anko', name: 'anko-support-v4', version: ankoVersion],
+            ankoAppcompat           : [group: 'org.jetbrains.anko', name: 'anko-appcompat-v7', version: ankoVersion],
+    ]
+
+    jetpackLibraries = [
+            appCompat               : [group: 'androidx.appcompat', name:'appcompat',version: androidxVersion],
+            cardView                : [group: 'androidx.cardview', name:'cardview',version: androidxVersion],
+            coordinatorLayout       : [group: 'androidx.coordinatorlayout', name:'coordinatorlayout',version: androidxVersion],
+            annotation              : [group: 'androidx.annotation', name: 'annotation', version: '1.2.0'],
+            recyclerView            : [group: 'androidx.recyclerview', name:'recyclerview',version: '1.2.1'],
+            supportv13              : [group: 'androidx.legacy', name:'legacy-support-v13',version: androidxVersion],
+            supportv4               : [group: 'androidx.legacy', name:'legacy-support-v4',version: androidxVersion],
+            design                  : [group: 'com.google.android.material', name:'material',version: '1.2.1'],
+            multidex                : [group: 'androidx.multidex', name:'multidex',version: androidxMultidexVersion],
+            constraintLayout        : [group: 'androidx.constraintlayout', name:'constraintlayout', version:androidxConstraintVersion],
+            vectorDrawable          : [group: 'androidx.vectordrawable', name: 'vectordrawable-animated', version: androidxVersion],
+            percentLayout           : [group: 'androidx.percentlayout', name: 'percentlayout', version: androidxVersion],
+    ]
+
+    firebase = [
+            auth                    : 'com.google.firebase:firebase-auth:19.3.1',
+            analytics               : 'com.google.firebase:firebase-analytics:19.0.0',
+            performance             : 'com.google.firebase:firebase-perf:19.0.9',
+            config                  : 'com.google.firebase:firebase-config-ktx:19.2.0',
+            crashlytics             : 'com.google.firebase:firebase-crashlytics:18.2.0',
+            playAuth                : 'com.google.android.gms:play-services-auth:18.0.0',
+            messaging               : 'com.google.firebase:firebase-messaging:22.0.0',
+            core                    : 'com.google.firebase:firebase-core:19.0.0',
+    ]
+
+    playstore = [
+            core                    : 'com.google.android.play:core:1.9.0',
+    ]
+
+    rxLibraries = [
+            rxJava2                 : [group: 'io.reactivex.rxjava3', name: 'rxjava', version: rxJava2Version],
+            rxAndroid               : [group: 'io.reactivex.rxjava3', name: 'rxandroid', version: rxAndroidVersion],
+            rxBinding2              : [group: 'com.jakewharton.rxbinding4', name: 'rxbinding-kotlin', version: rxBindingVersion],
+            rxBinding2Support       : [group: 'com.jakewharton.rxbinding4', name: 'rxbinding-support-v4-kotlin', version: rxBindingVersion],
+    ]
+
+    databaseLibraries = [
+            room                    : [group: 'androidx.room', name: 'room-runtime', version: roomVersion],
+    ]
+
+    networkLibraries = [
+            retrofit                : [group: 'com.squareup.retrofit2', name: 'retrofit', version: retrofitVersion],
+            gsonConverter           : [group: 'com.squareup.retrofit2', name: 'converter-gson', version: retrofitVersion],
+            rxJava2Adapter          : [group: 'com.squareup.retrofit2', name: 'adapter-rxjava2', version: retrofitRxJava2AdapterVersion],
+            okhttp                  : [group: 'com.squareup.okhttp3', name: 'okhttp', version: okHttpVersion],
+            interceptor             : [group: 'com.squareup.okhttp3', name: 'logging-interceptor', version: okHttpVersion],
+    ]
+
+    imageLibraries = [
+            glide                   : "com.github.bumptech.glide:glide:${glideVersion}",
+            roundedImage            : "com.makeramen:roundedimageview:${roundedImageVersion}",
+            circleImage             : "de.hdodenhof:circleimageview:3.1.0",
+            photoView               : "com.github.chrisbanes:PhotoView:${photoViewVersion}",
+            lottie                  : "com.airbnb.android:lottie:${lottieVersion}"
+    ]
+
+    libraries = [
+            dagger                  : "com.google.dagger:dagger:${daggerVersion}",
+            daggerAndroid           : "com.google.dagger:dagger-android:${daggerVersion}",
+            daggerAndroidSupport    : "com.google.dagger:dagger-android-support:${daggerVersion}",
+            gson                    : "com.google.code.gson:gson:${gsonVersion}",
+            bouncycastle            : "org.bouncycastle:bcprov-jdk16:${bouncyCastleVersion}",
+            chuck                   : "com.readystatesoftware.chuck:library:${chuckVersion}",
+            chuckNoOp               : "com.readystatesoftware.chuck:library-no-op:${chuckVersion}",
+            eventBus                : "org.greenrobot:eventbus:${eventBusVersion}",
+            curlLoggerInterceptor   : "com.github.grapesnberries:curlloggerinterceptor:${curlLoggerInterceptor}",
+            stetho                  : "com.facebook.stetho:stetho:${stethoVersion}",
+            stethoNoOp              : "com.github.mypplication:stetho-noop:${stethoNoOpVersion}",
+            jodatime                : "net.danlew:android.joda:${jodaTimeVersion}",
+            markwonCore             : "io.noties.markwon:core:${markwonVersion}",
+            markwonHtml             : "io.noties.markwon:html:${markwonVersion}",
+            jotter                  : 'com.github.pahlevikun:jotter:1.0.0',
+            leakCanary              : 'com.squareup.leakcanary:leakcanary-android:2.2',
+            easypermission          : "pub.devrel:easypermissions:${easyPermissionsVersion}",
+            ripple                  : "com.balysv:material-ripple:${rippleVersion}",
+            drawerBehaviour         : "com.infideap.drawerbehavior:drawer-behavior:${drawerBehaviorVersion}",
+            actrans                 : "com.github.pahlevikun:actrans:${actransVersion}",
+            shimmer                 : "com.facebook.shimmer:shimmer:${shimmerVersion}",
+            slideUp                 : "com.github.mancj:SlideUp-Android:${slideDialogVersion}",
+            intuitSdp               : "com.intuit.sdp:sdp-android:${intuitVersion}",
+            intuitSsp               : "com.intuit.ssp:ssp-android:${intuitVersion}",
+            bannerSlider            : "com.ss.bannerslider:bannerslider:${bannersliderVersion}",
+            nineoldAndroids         : "com.nineoldandroids:library:${nineoldandroidsVersion}",
+            daimajiaSlider          : "com.daimajia.slider:library:${daimajiaVersion}",
+            htmlTextView            : "org.sufficientlysecure:html-textview:${htmlVersion}",
+            ninjaFilePicker         : "com.droidninja:filepicker:${filepickerVersion}",
+            rxLocation              : 'com.patloew.rxlocation:rxlocation:1.0.5',
+            twillioVideo            : 'com.twilio:video-android:5.10.2',
+            jitsi                   : 'org.jitsi.react:jitsi-meet-sdk:2.8.2',
+            midtransSandbox         : 'com.midtrans:uikit:1.24.1-SANDBOX',
+            midtrans                : 'com.midtrans:uikit:1.24.1',
+    ]
+
+    annotation = [
+            daggerAnnotation        : [group: 'com.google.dagger', name: 'dagger-compiler', version: daggerVersion],
+    ]
+
+    compiler = [
+            glideCompiler           : "com.github.bumptech.glide:compiler:${glideVersion}",
+            daggerCompiler          : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            daggerAndroidCompiler   : "com.google.dagger:dagger-android-processor:${daggerVersion}",
+            roomCompiler            : "androidx.room:room-compiler:${roomVersion}",
+    ]
+
+    testLibraries = [
+            jUnit                   : 'junit:junit:4.12',
+            jUnitPlatformRunner     : 'org.junit.platform:junit-platform-runner:1.4.0',
+            mockk                   : 'io.mockk:mockk:1.10.0',
+            runner                  : "androidx.test:runner:${runnerVersion}",
+            espresso                : "androidx.test.espresso:espresso-core:${espressoCoreVersion}",
+            mockito                 : "org.mockito:mockito-core:${mockitoCoreVersion}",
+            mockitoInline           : "org.mockito:mockito-inline:${mockitoVersion}",
+            spoon                   : "com.squareup.spoon:spoon-client:${spoonClientVersion}",
+            falconSpoon             : "com.jraska:falcon-spoon-compat:${falconSpoonVersion}",
+            powermockApi            : "org.powermock:powermock-api-mockito:${powerMockVersion}",
+            powermockModule         : "org.powermock:powermock-module-junit4:${powerMockVersion}",
+            powermockRule           : "org.powermock:powermock-module-junit4-rule:${powerMockVersion}",
+            powermockFull           : "org.powermock:powermock-mockito-release-full:${powerMockVersion}",
+    ]
+
+}
