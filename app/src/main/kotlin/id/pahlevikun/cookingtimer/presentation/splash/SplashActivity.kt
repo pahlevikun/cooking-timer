@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import id.pahlevikun.cookingtimer.R
 import id.pahlevikun.cookingtimer.common.base.presentation.BaseActivity
 import id.pahlevikun.cookingtimer.di.presentation.PresentationComponent
+import id.pahlevikun.cookingtimer.presentation.splash.state.SplashContent
 import id.pahlevikun.cookingtimer.presentation.splash.state.SplashEvent
 import id.pahlevikun.cookingtimer.presentation.splash.state.SplashNavigation
 import javax.inject.Inject
@@ -13,10 +14,13 @@ import javax.inject.Inject
 class SplashActivity : BaseActivity() {
 
     @Inject
-    lateinit var viewModelFactory: ViewModelProvider.Factory
+    internal lateinit var viewModelFactory: ViewModelProvider.Factory
 
-    @field:Inject
+    @Inject
     internal lateinit var navigation: SplashNavigation
+
+    @Inject
+    internal lateinit var content: SplashContent
 
     private val viewModel by viewModels<SplashViewModel> { viewModelFactory }
 
@@ -33,7 +37,8 @@ class SplashActivity : BaseActivity() {
     }
 
     private fun initObserver() {
-        navigation.observe(this,viewModel.state)
+        navigation.observe(this, viewModel.state)
+        content.observe(this, viewModel.state)
     }
 
 }
