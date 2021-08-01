@@ -13,13 +13,13 @@ import javax.inject.Inject
 
 class SplashActivity : BaseActivity() {
 
-    @Inject
+    @field:Inject
     internal lateinit var viewModelFactory: ViewModelProvider.Factory
 
-    @Inject
+    @field:Inject
     internal lateinit var navigation: SplashNavigation
 
-    @Inject
+    @field:Inject
     internal lateinit var content: SplashContent
 
     private val viewModel by viewModels<SplashViewModel> { viewModelFactory }

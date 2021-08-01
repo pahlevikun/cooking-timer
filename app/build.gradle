@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
     id 'com.google.firebase.crashlytics'
+    id 'com.google.gms.google-services'
 }
 
 apply from: "$rootDir/build-system/dependencies.gradle"
@@ -22,6 +23,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
+    kapt { correctErrorTypes true}
     buildFeatures {
         viewBinding true
     }
@@ -161,7 +163,10 @@ dependencies {
     implementation jetpackLibraries.constraintLayout
     implementation jetpackLibraries.multidex
 
-    implementation rxLibraries.rxJava2
+    // Thread management
+    implementation 'androidx.compose.runtime:runtime-livedata:1.0.0'
+    implementation 'androidx.compose.runtime:runtime-rxjava3:1.0.0'
+    implementation rxLibraries.rxJava3
     implementation rxLibraries.rxAndroid
 
     implementation networkLibraries.gsonConverter

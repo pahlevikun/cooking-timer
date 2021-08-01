@@ -9,7 +9,7 @@ import id.pahlevikun.cookingtimer.presentation.splash.SplashModule
 
 @PresentationScope
 @Component(
-    modules = [PresentationBinders::class, ServiceModule::class, ViewModelModule::class, SplashModule::class],
+    modules = [ServiceModule::class, ViewModelModule::class, SplashModule::class],
     dependencies = [DomainComponent::class]
 )
 interface PresentationComponent {

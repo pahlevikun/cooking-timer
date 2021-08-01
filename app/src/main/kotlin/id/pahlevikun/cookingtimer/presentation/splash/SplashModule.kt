@@ -1,9 +1,10 @@
 package id.pahlevikun.cookingtimer.presentation.splash
 
 import androidx.lifecycle.ViewModel
-import com.google.android.datatransport.runtime.dagger.multibindings.IntoMap
 import dagger.Binds
 import dagger.Module
+import dagger.multibindings.IntoMap
+import id.pahlevikun.cookingtimer.di.presentation.PresentationScope
 import id.pahlevikun.cookingtimer.di.presentation.viewmodel.ViewModelKey
 import id.pahlevikun.cookingtimer.presentation.splash.state.SplashContent
 import id.pahlevikun.cookingtimer.presentation.splash.state.SplashContentImpl
@@ -16,11 +17,14 @@ abstract class SplashModule {
     @Binds
     @IntoMap
     @ViewModelKey(SplashViewModel::class)
-    abstract fun provideSplashViewModel(viewModel: SplashViewModel): ViewModel
+    @PresentationScope
+    abstract fun bindSplashViewModel(viewModel: SplashViewModel): ViewModel
 
     @Binds
+    @PresentationScope
     abstract fun provideSplashNavigation(impl: SplashNavigationImpl): SplashNavigation
 
     @Binds
+    @PresentationScope
     abstract fun provideSplashContent(impl: SplashContentImpl): SplashContent
 }
